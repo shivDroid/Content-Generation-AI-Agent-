@@ -81,3 +81,12 @@ writing_task = Task(
     agent = content_writer
 )
 
+crew = Crew(
+    agents = [senior_research_analyst, content_writer],
+    tasks = [research_task, writing_task],
+    verbose = True
+)
+
+result = crew.kickoff(inputs = {"topic" : topic})
+
+print(result)   
